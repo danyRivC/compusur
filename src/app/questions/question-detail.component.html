@@ -1,0 +1,41 @@
+<mat-card>
+    <mat-card-header>
+        <div mat-card-avatar>
+            <i mat-list-icon class="{{question.icon}} icon" ></i>
+        </div>
+        <mat-card-title>
+            <h2>{{question.title}}</h2>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <small>Danny Rivadeneira - {{question.createdAt | amLocale:'es' |amTimeAgo }}</small>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>{{question.description}}</p>
+    </mat-card-content>
+</mat-card>
+<div class="answers">
+    Respuestas
+    <ul class="answers-list" *ngIf="question.answers.length > 0">
+        <li>
+            <h5>Paula Becerra
+                <small>Hace unos segundos</small>
+            </h5>
+            <p class="description">
+                Yo tengo la respuesta
+            </p>
+        </li>
+        <li>
+            <h5>Paula Becerra
+                <small>Hace unos segundos</small>
+            </h5>
+            <p class="description">
+                Yo tengo la respuesta
+            </p>
+        </li>
+                
+    </ul>
+    <p *ngIf="question.answers.length === 0">Se el primero en responder</p>
+    <app-answers-form class="answer-form"></app-answers-form>
+</div>
+
