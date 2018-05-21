@@ -16,7 +16,31 @@
 </mat-card>
 <div class="answers">
     Respuestas
-    <ul class="answers-list" *ngIf="question.answers.length > 0">
+    <ul class="answers-list" >
+        <li>
+            <h5>Paula Becerra
+                <small>Hace unos segundos</small>
+            </h5>
+            <p class="description">
+                Yo tengo la respuesta
+            </p>
+        </li>
+        <li>
+            <h5>Paula Becerra
+                <small>Hace unos segundos</small>
+            </h5>
+            <p class="description">
+                Yo tengo la respuesta
+            </p>
+        </li>
+        <li>
+            <h5>Paula Becerra
+                <small>Hace unos segundos</small>
+            </h5>
+            <p class="description">
+                Yo tengo la respuesta
+            </p>
+        </li>
         <li>
             <h5>Paula Becerra
                 <small>Hace unos segundos</small>
@@ -35,7 +59,8 @@
         </li>
                 
     </ul>
-    <p *ngIf="question.answers.length === 0">Se el primero en responder</p>
+    <!--<p *ngIf="question.answers.length === 0">Se el primero en responder</p>-->
+    
     <app-answers-form class="answer-form"></app-answers-form>
 </div>
 

@@ -4,9 +4,9 @@ body{
     font-family: 'Roboto';
 }
 .mat-toolbar.mat-primary{
-    background: green;
+    background: #60CC94;
 }
 .mat-raised-button.mat-accent{
-    background: rgba(0, 128, 0, 0.726);
+    background: rgb(48, 157, 190);
     color: white;
 }
