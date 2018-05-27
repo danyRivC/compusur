@@ -1,4 +1,6 @@
 # CompuSurOverflow
+This project is developed by Danny Rivadeneira
+Este proyecto esta desarrollado por Danny Rivadeneira 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 

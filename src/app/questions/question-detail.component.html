@@ -1,7 +1,7 @@
 <mat-card>
     <mat-card-header>
         <div mat-card-avatar>
-            <i mat-list-icon class="{{question.icon}} icon" ></i>
+            <i mat-list-icon class="{{question.icon}} colored icon" ></i>
         </div>
         <mat-card-title>
             <h2>{{question.title}}</h2>
@@ -16,51 +16,19 @@
 </mat-card>
 <div class="answers">
     Respuestas
-    <ul class="answers-list" >
-        <li>
-            <h5>Paula Becerra
-                <small>Hace unos segundos</small>
+    <ul class="answers-list" *ngIf="question.answers.length > 0" >
+        <li *ngFor="let answer of question.answers">
+            <h5>{{ answer.user.fullName() }} 
+                <small>{{answer.createdAt | amLocale:'es' | amTimeAgo}}</small>
             </h5>
             <p class="description">
-                Yo tengo la respuesta
-            </p>
-        </li>
-        <li>
-            <h5>Paula Becerra
-                <small>Hace unos segundos</small>
-            </h5>
-            <p class="description">
-                Yo tengo la respuesta
-            </p>
-        </li>
-        <li>
-            <h5>Paula Becerra
-                <small>Hace unos segundos</small>
-            </h5>
-            <p class="description">
-                Yo tengo la respuesta
-            </p>
-        </li>
-        <li>
-            <h5>Paula Becerra
-                <small>Hace unos segundos</small>
-            </h5>
-            <p class="description">
-                Yo tengo la respuesta
-            </p>
-        </li>
-        <li>
-            <h5>Paula Becerra
-                <small>Hace unos segundos</small>
-            </h5>
-            <p class="description">
-                Yo tengo la respuesta
+                {{answer.description}}
             </p>
         </li>
                 
     </ul>
-    <!--<p *ngIf="question.answers.length === 0">Se el primero en responder</p>-->
+    <p *ngIf="question.answers.length === 0">Se el primero en responder</p>
     
-    <app-answers-form class="answer-form"></app-answers-form>
+    <app-answers-form [question]="question" class="answer-form"></app-answers-form>
 </div>
 

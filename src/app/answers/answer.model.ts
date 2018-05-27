@@ -1,11 +1,6 @@
 import {Question} from '../questions/question.model';
-export class User{
-    constructor(
-        public firtName: String,
-        public lastName:String ){
+import { User } from '../auth/user.model';
 
-    }
-}
 export class Answer{
     constructor(
         public description: string,

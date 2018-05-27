@@ -1,0 +1,57 @@
+<div></div>
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <input matInput
+        type="text"
+        placeholder="Nombre"
+        formControlName="firstName"
+        id="firstName">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput
+        type="text"
+        placeholder="Apellido"
+        formControlName="lastName"
+        id="lastName">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput
+        placeholder="Correo Electronico"
+        formControlName="email"
+        id="email"
+
+        > 
+    </mat-form-field>
+    <div class="passwords" [ngClass]="{'dont-check':passwordNotCheck}" id="passwords">
+        <p *ngIf="passwordNotCheck"> Las Contraseñas no coinciden</p>
+        <mat-form-field>
+        <input 
+        
+        [type]="hide ? 'password': 'text'"
+        matInput
+        placeholder="Contraseña"
+        formControlName="password"
+        id="password"
+        >
+        <mat-icon matSuffix (click)="hide= !hide">{{hide ? 'visibility':'visibility_off'}}</mat-icon>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput
+        
+        [type]="hide ? 'password': 'text'"
+        
+        
+        placeholder="Repita la contraseña"
+        formControlName="passwordCheck"
+        id="password2">
+        <mat-icon matSuffix (click)="hide= !hide">{{hide ? 'visibility':'visibility_off'}}</mat-icon>
+    </mat-form-field>
+    </div>
+    
+    <button type="submit" mat-raised-button color="accent" >Crear Cuenta</button>
+</form>
+<p style="text-align: center">
+    ¿Ya eres miembro?
+    <a mat-button color = "primary" [routerLink]="['/signin']">Inicia Sesión</a>
+</p>

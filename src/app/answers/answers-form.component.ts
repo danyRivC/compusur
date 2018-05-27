@@ -1,22 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Answer, } from './answer.model';
+import { Question } from '../questions/question.model';
+import { User } from '../auth/user.model';
 @Component({
     selector: 'app-answers-form',
     templateUrl: './answers-form.component.html',
     styles: [`
         form{
-            display: flex;
-            flex-direction: column;
-            width: 90%;
-            margin: 40px auto;
             margin-top: 20px;
         }
     `]
 
 })
-export class AnswerFormComponent{
-    onSubmit(form: NgForm){
-        console.log(form.value.description);
+export class AnswerFormComponent {
+    @Input() question: Question;
 
+    onSubmit(form: NgForm) {
+        const answer = new Answer(
+            form.value.description,
+            this.question,
+            new Date(),
+            new User(null, null, 'Paula', 'Becerra')
+
+        );
+        this.question.answers.unshift(answer);
+        form.reset();
     }
 }
