@@ -4,7 +4,12 @@ import { User } from './user.model';
 
 @Component({
     selector: 'app-signing-screen',
-    templateUrl: './signin-screen.component.html'
+    templateUrl: './signin-screen.component.html',
+    styles: [`
+    .mat-fab.mat-accent, .mat-flat-button.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
+        background: rgb(48, 157, 190)!important;
+        
+    `]
 })
 export class SigninScreenComponent implements OnInit {
     signinForm: FormGroup;

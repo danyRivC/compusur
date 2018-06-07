@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatCheckboxModule, MatCardModule, MatListModule, MatGridListModule, MatRadioModule, MatExpansionModule } from '@angular/material';
+// tslint:disable-next-line:max-line-length
+import { MatButtonModule, MatCheckboxModule, MatCardModule, MatListModule, MatGridListModule, MatRadioModule, MatExpansionModule, MatProgressSpinnerModule } from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
-const modules=[
+const modules= [
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
@@ -13,7 +14,8 @@ const modules=[
     MatListModule,
     MatGridListModule,
     MatRadioModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatProgressSpinnerModule
 ]
 @NgModule({
     imports: modules,

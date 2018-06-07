@@ -36,3 +36,7 @@ h5{
     background-color: white;
     border-top: 1px solid #dcdcdc;
 }
+.mat-fab.mat-accent, .mat-flat-button.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
+        background: rgb(48, 157, 190)!important;
+ }
+    

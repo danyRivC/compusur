@@ -4,7 +4,12 @@ import { User } from './user.model';
 
 @Component({
     selector: 'app-signup-screen',
-    templateUrl: './signup-screen.component.html'
+    templateUrl: './signup-screen.component.html',
+    styles: [`
+    .mat-fab.mat-accent, .mat-flat-button.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
+        background: rgb(48, 157, 190)!important;
+        
+    `]
 })
 export class SignupScreenComponent implements OnInit {
     signupForm: FormGroup;
